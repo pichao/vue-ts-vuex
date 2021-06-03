@@ -1,0 +1,17 @@
+vue项目，vue-cli默认publicPath是"./",动态路由渲染，路由跳转情况正常，但是刷新或者直接访问会报错。
+    解决办法： 修改publicPath的值为"/",如果项目部署在域名子目录上，则publicPath相应的更改
+
+
+
+配置别名坑点
+    在html中引用需要在别名前面加上“~”这个符号
+    在css中用别名，直接引用就可，别名最好不用@符号，注意区分场景是否加 ~
+
+
+报错：rror evaluating function unit: the first argument to unit must be a number. Have you forgotten parenthesis?
+    处理方法： less 的lessOptions添加math:'always'
+
+注意在vue里模板template里使用模板字符串的写法，在属性前加冒号，然后模板字符串写在双引号里面
+
+
+router-link的to属性可以使字符串，也可以是对象，也可以是模板字符串
